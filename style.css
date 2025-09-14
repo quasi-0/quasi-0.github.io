@@ -1,0 +1,148 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: #181c20;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background: #ff5252;
+    padding: 12px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 2px solid #111;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.container {
+    background: #23272b;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    padding: 2.5rem 3rem;
+    text-align: center;
+    max-width: 420px;
+}
+
+h1 {
+    color: #ffb300;
+    margin-bottom: 0.5em;
+}
+
+.badge {
+    display: inline-block;
+    background: #ffb300;
+    color: #000;
+    border-radius: 6px;
+    padding: 0.2em 0.7em;
+    font-size: 0.95em;
+    margin-bottom: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.interactable {
+    display: inline-block;
+    background: #62b8f6;
+    color: #000;
+    padding: 5px 10px;
+    margin: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.interactable a {
+    color: #000;
+    text-decoration: none;
+}
+
+.interactable a:hover {
+    text-decoration: underline;
+}
+
+.amazing {
+    color: #00e676;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 1.5em;
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    margin: 3rem 0;
+}
+
+.nav {
+    display: flex;
+    background: #2a2a2a;
+    border-bottom: 2px solid #111;
+    width: 100%;
+}
+
+.nav button {
+    flex: 1;
+    padding: 10px;
+    background: #333;
+    border: none;
+    color: #ccc;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav button:hover {
+    background: #444;
+    color: #fff;
+}
+
+.nav button.active {
+    background: #111;
+    border-bottom: 2px solid #ff5252;
+    color: #ff5252;
+}
+
+.tab {
+    display: none;
+    padding: 20px;
+}
+
+.card {
+    background: #23272b;
+    border: 1px solid #333;
+    margin: 12px 0;
+    padding: 14px 18px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.card:hover {
+    background: #2d3237;
+}
+
+.card a {
+    color: #00e676;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.card small {
+    display: block;
+    color: #999;
+    font-size: 0.85em;
+    margin-top: 4px;
+}
