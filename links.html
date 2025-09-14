@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>my shitty little link collection</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background: #181c20;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #ff5252;
+      padding: 12px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      border-bottom: 2px solid #111;
+      letter-spacing: 1px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #ffb300;
+      color: #000;
+      padding: 5px 10px;
+      margin: 1rem;
+      border-radius: 8px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .interactable {
+      display: inline-block;
+      background: #62b8f6;
+      color: #000;
+      padding: 5px 10px;
+      margin: 1rem;
+      border-radius: 8px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .interactable a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .interactable a:hover {
+      text-decoration: underline;
+    }
+
+    .nav {
+      display: flex;
+      background: #2a2a2a;
+      border-bottom: 2px solid #111;
+    }
+
+    .nav button {
+      flex: 1;
+      padding: 10px;
+      background: #333;
+      border: none;
+      color: #ccc;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .nav button:hover {
+      background: #444;
+      color: #fff;
+    }
+
+    .nav button.active {
+      background: #111;
+      border-bottom: 2px solid #ff5252;
+      color: #ff5252;
+    }
+
+    .tab {
+      display: none;
+      padding: 20px;
+    }
+
+    .card {
+      background: #23272b;
+      border: 1px solid #333;
+      margin: 12px 0;
+      padding: 14px 18px;
+      border-radius: 8px;
+      transition: background 0.2s ease;
+    }
+
+    .card:hover {
+      background: #2d3237;
+    }
+
+    .card a {
+      color: #00e676;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    .card small {
+      display: block;
+      color: #999;
+      font-size: 0.85em;
+      margin-top: 4px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      margin: 3rem 0;
+    }
+
+  </style>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab').forEach(t => t.style.display = 'none');
+      document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+      document.getElementById(id).style.display = 'block';
+      document.getElementById('btn-' + id).classList.add('active');
+    }
+
+    window.onload = () => showTab('personal');
+  </script>
+</head>
+<body>
+
+<header>welcome to my shitty little link portal</header>
+<div class="badge">WARNING: May Contain traces of Opinions</div>
+<div class="interactable" style="float: right;"><a href="http://86.131.76.154:8080">take me to the homepage</a></div>
+
+<div class="nav">
+  <button id="btn-personal" onclick="showTab('personal')">Socials</button>
+  <button id="btn-projects" onclick="showTab('projects')">Projects</button>
+  <button id="btn-shitposts" onclick="showTab('shitposts')">Shitposts</button>
+  <button id="btn-tools" onclick="showTab('tools')">Tools</button>
+</div>
+
+<!-- Personal Links -->
+<div id="personal" class="tab">
+  <div class="card">
+    <a href="https://www.youtube.com/@chroniconicon" target="_blank">Youtube</a>
+    <small>please don't expect content</small>
+  </div>
+</div>
+
+<!-- Projects -->
+<div id="projects" class="tab">
+  <div class="card">
+    <a href="http://localhost:1337/admin" target="_blank">Admin Panel</a>
+    <small>Admin Panel, if this works for you, get off my computer!</small>
+  </div>
+</div>
+
+<!-- Shitposts -->
+<div id="shitposts" class="tab">
+  <div class="card">
+    <a href="http://86.131.76.154:8080/mango" target="_blank">mango</a>
+    <small>mango mango 67</small>
+  </div>
+</div>
+
+<!-- Tools -->
+<div id="tools" class="tab">
+  <div class="card">
+	come back later
+</div>
+
+<div class="footer">
+  &copy; built with supports of gum and sticky tape.
+</div>
+
+</body>
+</html>
