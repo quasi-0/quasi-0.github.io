@@ -4,26 +4,18 @@ body {
     color: #f5f5f5;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
 }
 
 header {
     background: #ff5252;
     padding: 12px;
-    margin: 12px auto;
-    border-radius: 12px;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     color: #fff;
     border-bottom: 2px solid #111;
     letter-spacing: 1px;
-    width: 90%;
-    max-width: 900px; /* Increased max-width for large screens */
-    box-sizing: border-box;
+    width: 100%;
 }
 
 .container {
@@ -32,18 +24,59 @@ header {
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
     padding: 2.5rem 3rem;
     text-align: center;
+    max-width: 620px;
     width: 90%;
-    max-width: 900px; /* same as header, keep consistent */
     box-sizing: border-box;
+}
+
+h1 {
+    color: #ffb300;
+    margin-bottom: 0.5em;
+}
+
+.badge {
+    display: inline-block;
+    background: #ffb300;
+    color: #000;
+    padding: 5px 10px;
+    margin: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.interactable {
+    display: inline-block;
+    background: #62b8f6;
+    color: #000;
+    padding: 5px 10px;
+    margin: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.interactable a {
+    color: #000;
+    text-decoration: none;
+}
+
+.interactable a:hover {
+    text-decoration: underline;
+}
+
+.amazing {
+    color: #00e676;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 1.5em;
 }
 
 .nav {
     display: flex;
     background: #2a2a2a;
     border-bottom: 2px solid #111;
-    width: 90%;
-    max-width: 900px;
-    box-sizing: border-box;
+    width: 100%;
 }
 
 .nav button {
@@ -54,7 +87,6 @@ header {
     color: #ccc;
     font-weight: bold;
     cursor: pointer;
-    min-width: 0;
 }
 
 .nav button:hover {
@@ -68,45 +100,80 @@ header {
     color: #ff5252;
 }
 
-/* Responsive Adjustments */
+.tab {
+    display: none;
+    padding: 20px;
+}
 
+.card {
+    background: #23272b;
+    border: 1px solid #333;
+    margin: 12px 0;
+    padding: 14px 18px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.card:hover {
+    background: #2d3237;
+}
+
+.card a {
+    color: #00e676;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.card small {
+    display: block;
+    color: #999;
+    font-size: 0.85em;
+    margin-top: 4px;
+}
+
+.centered-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    margin: 3rem 0;
+}
+
+/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
     body {
+        justify-content: flex-start;
         padding: 1rem;
     }
 
     header {
         font-size: 20px;
         padding: 10px;
-        width: 95%;
-        max-width: none;
-        margin: 12px 0;
-        border-radius: 12px;
     }
 
     .container {
-        padding: 2rem 1.5rem;
-        width: 95%;
-        max-width: none;
-        border-radius: 12px;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+        padding: 2rem;
     }
 
     .nav {
         flex-direction: column;
-        width: 95%;
-        max-width: none;
     }
 
     .nav button {
         width: 100%;
-        text-align: center;
-        border-radius: 0;
-        border-bottom: 1px solid #444;
-    }
-
-    .nav button:last-child {
-        border-bottom: none;
     }
 }
 
@@ -121,16 +188,5 @@ header {
 
     .card a {
         font-size: 1em;
-    }
-
-    .badge,
-    .interactable {
-        margin: 0.5rem 0.25rem;
-        padding: 4px 8px;
-        font-size: 0.9em;
-    }
-
-    .container {
-        padding: 1.5rem 1rem;
     }
 }
