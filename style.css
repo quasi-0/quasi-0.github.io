@@ -61,7 +61,8 @@ h1 {
 }
 
 .interactable a:hover {
-    text-decoration: underline;
+    background: #95cdf4;
+    text-decoration: none;
 }
 
 .amazing {
@@ -84,6 +85,7 @@ h1 {
     background: #333;
     border: none;
     color: #ccc;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     cursor: pointer;
 }
